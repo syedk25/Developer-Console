@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+@import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark],
+    [data-theme=dark] *));
+
+@theme {
+  --color-text-light: #ffffff;
+  --color-text-dark: #1f2937;
+  --color-bg-light: #f8fafc;
+  --color-bg-dark: #030712;
+}
+
+@layer base {
+  html {
+    font-family: "DM Sans", "Avenir Next", ui-sans-serif, system-ui, sans-serif;
+    background: #f8fafc;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+  }
+
+  html[data-theme="dark"],
+  html[data-theme="dark"] body {
+    background-color: #05070d;
+    color-scheme: dark;
+  }
+
+  html[data-theme="light"] {
+    color-scheme: light;
+  }
+
+  code,
+  pre {
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+  }
+
+  body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  ::selection {
+    color: #052e16;
+    background: #a7f3d0;
+  }
+}

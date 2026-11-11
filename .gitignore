@@ -1,0 +1,13 @@
+# Root-level ignores
+target/
+node_modules/
+dist/
+dist-server/
+*.log
+.env
+.env.local
+*.jar
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
